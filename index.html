@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assent/css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    body class="d-flex flex-column min-vh-100">
+    <header class="bg-warning text-center text-white p-2 shadow">
+      <h1 class="fw-bold">Simpsons API🍩</h1>
+      <h2 class=" ">
+        Instituto Politécnico - Alejandro Palacios <br />
+        Trabajo Práctico Integrador - TLP
+      </h2>
+    </header>
+    <main class="container">
+      <!-- Buscador  -->
+      <section class="search-section mb-4">
+        <form id="formBuscar" class="search-form mt-3">
+          <label for="buscarPj" class="fs-3 fw-semibold text-gray"
+            >Buscar personaje por nombre</label
+          >
+          <div class="input-group">
+            <input
+              type="search"
+              id="buscarPj"
+              class="form-control"
+              placeholder="Ej: Homer, Marge, Bart..."
+            />
+          </div>
+          <button type="submit" id="btnLimpiar" class="btn btn-warning mt-2">
+            Limpiar
+          </button>
+        </form>
+      </section>
+      <!-- ACÁ VAN A ESTAR LOS MENSAJES DE ERRORES  -->
+      <div id="mensajeEstado" class="mb-3"></div>
+      <!-- ACÁ VAN A ESTAR LAS CARTAS QUE VAN A CONTENER LOS PERSONAJES -->
+      <div class="row g-3" id="cartaPj"></div>
+      <!-- ESTE ES EL MODAL DE BOOSTRAP -->
+      <div class="modal fade" id="modalDetalle" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalNombre"></h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+              ></button>
+            </div>
+            <div class="modal-body text-center">
+              <img
+                id="modalImagen"
+                src=""
+                alt=""
+                class="img-fluid mb-3"
+                style="max-height: 250px"
+              />
+              <p><strong>Edad:</strong> <span id="modalEdad"></span></p>
+              <p>
+                <strong>Fecha de nacimiento:</strong>
+                <span id="modalNacimiento"></span>
+              </p>
+              <p><strong>Género:</strong> <span id="modalGenero"></span></p>
+              <p>
+                <strong>Ocupación:</strong> <span id="modalOcupacion"></span>
+              </p>
+              <p><strong>Estado:</strong> <span id="modalEstado"></span></p>
+              <p><em id="modalFrase"></em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer
+      class="bg-warning footer mt-auto text-black fw-bold text-center text-muted p-1"
+    >
+      <p>
+        &copy;Alejandro Palacios <br />
+        Instituto Politécnico Formosa
+      </p>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
